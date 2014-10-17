@@ -1,0 +1,25 @@
+{
+  "name": "bio-page",
+  "version": "0.1.0",
+  "authors": [
+    "dwaltz37@gmail.com"
+  ],
+  "description": "David Waltz personal bio page",
+  "keywords": [
+    "David",
+    "Waltz"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "jquery": ">= 1.9.0",
+    "d3": "~3.4.12"
+  }
+}

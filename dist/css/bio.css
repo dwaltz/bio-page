@@ -1,0 +1,286 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Century Gothic, sans-serif;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-ms-keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/*The rest of the animation will only be for webkit, due to performance issues*/
+@-webkit-keyframes lightOne {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  44% {
+    opacity: .1;
+  }
+  58% {
+    opacity: .1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes carOne {
+  0% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+.bio .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  height: 100%;
+}
+.bio .row {
+  margin: 0;
+  padding: 0;
+}
+.bio .row.padded {
+  padding: 80px 0;
+}
+.bio-overview {
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+}
+.bio-overview-text {
+  color: #666666;
+  max-width: 70%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 25px;
+  line-height: 1.4em;
+}
+.bio-overview-image {
+  width: 140px;
+  border: 4px solid #5caf50;
+}
+.bio-personal-col {
+  padding: 30px;
+  text-align: center;
+}
+.bio-personal-col-text > span {
+  font-size: 16px;
+  display: block;
+  line-height: 30px;
+}
+.bio-personal-col a {
+  text-decoration: underline;
+  color: #fff;
+}
+.bio-personal-col-dash {
+  width: 20px;
+  border-bottom: 3px solid #fff;
+  margin: 20px auto;
+}
+.bio-personal-col .glyphicon {
+  font-size: 40px;
+}
+.bio-hero {
+  position: relative;
+  overflow: hidden;
+}
+.bio-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  width: 100%;
+}
+.bio-hero-overlay > div {
+  float: left;
+  height: 100%;
+}
+.bio-hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -webkit-animation: pulse 80s ease infinite;
+  -moz-animation: pulse 80s ease infinite;
+  -ms-animation: pulse 80s ease infinite;
+  animation: pulse 80s ease infinite;
+}
+.bio-hero-image-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/static-city.png') no-repeat center center scroll;
+}
+.bio-hero-image-light-one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/light1.png') no-repeat center center scroll;
+  -webkit-animation: lightOne 7s ease infinite;
+  -moz-animation: lightOne 7s ease infinite;
+  -ms-animation: lightOne 7s ease infinite;
+  animation: lightOne 7s ease infinite;
+}
+.bio-hero-image-car-one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/car1.png') no-repeat center center scroll;
+  -webkit-animation: carOne 80s ease infinite;
+  -moz-animation: carOne 80s ease infinite;
+  -ms-animation: carOne 80s ease infinite;
+  animation: carOne 80s ease infinite;
+}
+.bio-hero-banner {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  text-align: center;
+}
+.bio-hero-banner-align {
+  margin: auto auto;
+}
+.bio-hero-banner-title {
+  letter-spacing: 0.3em;
+  font-size: 3em;
+  text-shadow: 1px 1px 12px #3f3f3f;
+  font-weight: 300;
+  background: rgba(1, 1, 1, 0.6);
+  padding: 0.3em;
+  color: #ffffff;
+  padding-left: 1em;
+  font-style: normal;
+  text-transform: uppercase;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  display: table;
+  margin: 0 auto;
+}
+.bio-hero-banner-subtitle {
+  letter-spacing: 0.3em;
+  font-size: .9em;
+  text-shadow: 1px 1px 10px #3f3f3f;
+  font-weight: 300;
+  background: rgba(1, 1, 1, 0.6);
+  padding: 0.3em;
+  color: #ffffff;
+  padding-left: 1em;
+  font-style: normal;
+  text-transform: uppercase;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.bio-contact {
+  background-color: #fbfbfb;
+  color: #666666;
+  text-align: center;
+}
+.bio-contact h3 {
+  margin-top: 0;
+}
+.bio-contact ul {
+  list-style-type: none;
+  margin: 0 auto;
+  display: table;
+  padding-left: 0;
+}
+.bio-contact ul li {
+  float: left;
+  display: inline;
+  width: 90px;
+  text-align: center;
+}
+.bio-contact a {
+  font-size: 50px;
+  text-decoration: none;
+  color: #666666;
+}
+.bio-contact a .fa-envelope:hover {
+  transition: color 0.5s ease;
+  color: #f05448;
+}
+.bio-contact a .fa-github-alt:hover {
+  transition: color 0.5s ease;
+  color: #5caf50;
+}
+.bio-contact a .fa-twitter:hover {
+  transition: color 0.5s ease;
+  color: #55acee;
+}
+.bio-contact a .fa-linkedin:hover {
+  transition: color 0.5s ease;
+  color: #1482ba;
+}
+.bio-footer {
+  color: #fff;
+  position: relative;
+  background-color: #666666;
+  text-align: center;
+}
+.bio-footer.row {
+  padding: 10px 0;
+}
+.bio-footer a {
+  text-decoration: underline;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+}
+/*# sourceMappingURL=bio-page.css.map */

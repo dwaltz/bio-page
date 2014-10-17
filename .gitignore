@@ -1,0 +1,10 @@
+node_modules/
+temp/
+.travis.yml
+.DS_Store
+
+#########################
+# WebStorm / Intellij IDEA
+#########################
+.idea
+/*.iml

@@ -1,0 +1,44 @@
+@background-animation: pulse 80s ease infinite;
+@light-one-animation: lightOne 7s ease infinite;
+@car-one-animation: carOne 80s ease infinite;
+
+@keyframes pulse {
+	0% { transform: scale(1, 1); }
+	50% { transform: scale(1.1, 1.1);}
+	100% { transform: scale(1, 1);}
+}
+
+@-moz-keyframes pulse {
+	0% { transform: scale(1, 1); }
+	50% { transform: scale(1.1, 1.1);}
+	100% { transform: scale(1, 1);}
+}
+
+@-webkit-keyframes pulse {
+	0% { transform: scale(1, 1); }
+	50% { transform: scale(1.1, 1.1);}
+	100% { transform: scale(1, 1);}
+}
+
+@-ms-keyframes pulse {
+	0% { transform: scale(1, 1); }
+	50% { transform: scale(1.1, 1.1);}
+	100% { transform: scale(1, 1);}
+}
+
+/*The rest of the animation will only be for webkit, due to performance issues*/
+
+@-webkit-keyframes lightOne {
+	0% {opacity: 1;}
+	40% {opacity: 1;}
+	44% { opacity: .1;}
+	58% { opacity: .1;}
+	60% { opacity: 1;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes carOne {
+	0% {transform: scale(1.1, 1.1);}
+	50% {transform: scale(1, 1);}
+	100% {transform: scale(1.1, 1.1);}
+}
