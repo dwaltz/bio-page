@@ -192,7 +192,15 @@ body {
   text-align: center;
 }
 .bio-hero-banner-align {
-  margin: auto auto;
+  text-align: center;
+  position: absolute;
+  height: 110px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
 }
 .bio-hero-banner-title {
   letter-spacing: 0.3em;
