@@ -4,6 +4,10 @@
   "description": "David Waltz personal bio page",
   "private": false,
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower install"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com/dwaltz/bio-page.git"
@@ -11,6 +15,9 @@
   "author": "David Waltz",
   "license": "MIT",
   "dependencies": {
+	  "bower": "~1.3.9",
+	  "express": "~4.2.0",
+	  "compression": "~1.2.0"
   },
   "devDependencies": {
     "bower": "~1.3.9",
