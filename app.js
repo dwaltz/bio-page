@@ -36,7 +36,7 @@ app.use('/bower_components', express.static( __dirname + '/bower_components' ) )
 
 app.get( '/', function( req, res ){
 	res.render( 'index', {
-		isProd: !!process.env.NODE_ENV
+		isProd: true
 	});
 });
 
