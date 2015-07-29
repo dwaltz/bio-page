@@ -9,7 +9,7 @@ var express         = require('express');
 var compression     = require('compression');
 
 //view engine
-var expressHandlebars       = require( 'express3-handlebars' );
+var expressHandlebars       = require( 'express-handlebars' );
 
 var app = express();
 
@@ -36,7 +36,7 @@ app.use('/bower_components', express.static( __dirname + '/bower_components' ) )
 
 app.get( '/', function( req, res ){
 	res.render( 'index', {
-		isProd: true
+		isProd: !!process.env.NODE_ENV
 	});
 });
 
