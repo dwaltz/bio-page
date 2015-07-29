@@ -8,6 +8,9 @@ var express         = require('express');
 //required express 4 middleware
 var compression     = require('compression');
 
+//view engine
+var expressHandlebars       = require( 'express3-handlebars' );
+
 var app = express();
 
 // setting mime types for webfonts and other things
@@ -21,11 +24,20 @@ app.disable( 'X-Powered-By' ); //SITE SECURITY: this way people cant see that we
 app.use( compression() ); // gzipping
 app.set( 'port', process.env.PORT || 5000 ); //setting port
 
-app.use(express.static(path.join(__dirname, 'dist')));
+// Configuring view engine
+app.engine('.html', expressHandlebars({
+	defaultLayout: 'master',
+	extname: ".html"
+}));
+app.set('view engine', '.html');
+
+app.use(express.static(path.join(__dirname, '/dist')));
 app.use('/bower_components', express.static( __dirname + '/bower_components' ) );
 
 app.get( '/', function( req, res ){
-	res.sendfile('index.html');
+	res.render( 'index', {
+		isProd: !!process.env.NODE_ENV
+	});
 });
 
 http.createServer( app ).listen( app.get( 'port' ) );

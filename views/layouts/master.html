@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>David Waltz - Web Application Developer</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="David Waltz Bio Page | A little bit about my life and experience as a web developer">
+	<meta name="keywords" content="david, waltz, web, development, programming, javascript, css, html, saas, node.js, github, opensource">
+
+	{{#if isProd}}
+		<link href="css/bio-compressed.css" rel="stylesheet" type="text/css">
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	{{else}}
+		<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/bio.css" rel="stylesheet" type="text/css">
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	{{/if}}
+</head>
+<body class="bio">
+	{{{ body }}}
+</body>
+</html>

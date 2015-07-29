@@ -1,7 +1,5 @@
 /*global module:false*/
 
-var advpng = require('imagemin-advpng');
-
 module.exports = function(grunt) {
 	'use strict';
 
@@ -74,6 +72,20 @@ module.exports = function(grunt) {
 				expand: true,
 				filter: 'isFile',
 				src: ['*']
+			},
+			fontsBootstrap: {
+				cwd: './bower_components/bootstrap/fonts/',
+				dest: 'dist/fonts',
+				expand: true,
+				filter: 'isFile',
+				src: ['*']
+			},
+			fontsAwesome: {
+				cwd: './bower_components/font-awesome/fonts/',
+				dest: 'dist/fonts',
+				expand: true,
+				filter: 'isFile',
+				src: ['*']
 			}
 		},
 
@@ -111,6 +123,15 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'dist/css/bio.min.css': 'dist/css/bio.css'
+				}
+			},
+			minUnCss: {
+				options: {
+					cleancss: true,
+					report: 'min'
+				},
+				files: {
+					'dist/css/bio-compressed.min.css': 'dist/css/bio-compressed.css'
 				}
 			}
 		},
@@ -154,6 +175,14 @@ module.exports = function(grunt) {
 				, pushTo: 'origin'
 				, gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
 			}
+		},
+
+		uncss: {
+			dist: {
+				files: {
+					'./dist/css/bio-compressed.css': ['./index.html']
+				}
+			}
 		}
 	});
 
@@ -162,7 +191,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['jshint', 'dist']);
 
-	grunt.registerTask('dist', ['clean:dist', 'less', 'copy:js', 'imagemin:compress', 'uglify']);
+	grunt.registerTask('dist', ['clean:dist', 'less:dist', 'less:minify', 'copy:js', 'uncss:dist', 'less:minUnCss', 'imagemin:compress', 'uglify']);
 
 	grunt.registerTask('dev-build', ['clean:dist', 'less', 'copy', 'uglify']);
 
