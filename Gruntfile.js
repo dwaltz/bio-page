@@ -191,7 +191,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['jshint', 'dist']);
 
-	grunt.registerTask('dist', ['clean:dist', 'less:dist', 'less:minify', 'copy:js', 'uncss:dist', 'less:minUnCss', 'imagemin:compress', 'uglify']);
+	grunt.registerTask('dist', ['clean:dist', 'less:dist', 'less:minify', 'copy:js', 'copy:fontsBootstrap', 'copy:fontsAwesome', 'uncss:dist', 'less:minUnCss', 'imagemin:compress', 'uglify']);
 
 	grunt.registerTask('dev-build', ['clean:dist', 'less', 'copy', 'uglify']);
 
