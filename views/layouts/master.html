@@ -25,10 +25,10 @@
 			gtag('config', 'UA-65763539-1');
 		</script>
 
-		<script src="TemplateData/UnityProgress.js"></script>
-		<script src="Build/UnityLoader.js"></script>
+		<script src="ftp/planet_genTemplateData/UnityProgress.js"></script>
+		<script src="ftp/planet_genBuild/UnityLoader.js"></script>
 		<script>
-			gameInstance = UnityLoader.instantiate("gameContainer", "Build/planet_gen.json", {onProgress: UnityProgress});
+			gameInstance = UnityLoader.instantiate("gameContainer", "ftp/planet_gen/Build/planet_gen.json", {onProgress: UnityProgress});
 		</script>
 	{{else}}
 		<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
