@@ -1,0 +1,14 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Planetary_Exploration",
+"dataUrl": "planet_gen.data.unityweb",
+"asmCodeUrl": "planet_gen.asm.code.unityweb",
+"asmMemoryUrl": "planet_gen.asm.memory.unityweb",
+"asmFrameworkUrl": "planet_gen.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "planet_gen.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}

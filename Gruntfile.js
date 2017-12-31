@@ -66,6 +66,13 @@ module.exports = function(grunt) {
 				filter: 'isFile',
 				src: ['*']
 			},
+			ftp: {
+				cwd: 'ftp/',
+				dest: 'dist/ftp/',
+				expand: true,
+				filter: 'isFile',
+				src: ['*']
+			},
 			img: {
 				cwd: 'img/',
 				dest: 'dist/img/',
@@ -191,7 +198,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['jshint', 'dist']);
 
-	grunt.registerTask('dist', ['clean:dist', 'less:dist', 'less:minify', 'copy:js', 'copy:fontsBootstrap', 'copy:fontsAwesome', 'uncss:dist', 'less:minUnCss', 'imagemin:compress', 'uglify']);
+	grunt.registerTask('dist', ['clean:dist', 'less:dist', 'less:minify', 'copy:js', 'copy:ftp', 'copy:fontsBootstrap', 'copy:fontsAwesome', 'uncss:dist', 'less:minUnCss', 'imagemin:compress', 'uglify']);
 
 	grunt.registerTask('dev-build', ['clean:dist', 'less', 'copy', 'uglify']);
 
