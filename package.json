@@ -33,6 +33,7 @@
     "grunt-html-validation": "~0.1.16",
     "grunt-uncss": "^0.4.3",
     "imagemin-advpng": "~1.0.0",
+    "instafeed": "^2.0.0",
     "load-grunt-tasks": "^0.4.0"
   }
 }

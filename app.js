@@ -33,6 +33,8 @@ app.set('view engine', '.html');
 
 app.use(express.static(path.join(__dirname, '/dist')));
 app.use('/bower_components', express.static( __dirname + '/bower_components' ) );
+app.use('/ftp', express.static( __dirname + '/ftp' ) );
+
 
 app.get( '/', function( req, res ){
 	res.render( 'index', {

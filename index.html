@@ -15,6 +15,7 @@
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/instafeed.js/instafeed.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65763539-1"></script>
@@ -26,24 +27,24 @@
 		gtag('config', 'UA-65763539-1');
 	</script>
 
+	<script src="ftp/planet_gen/TemplateData/UnityProgress.js"></script>
+	<script src="ftp/planet_gen/Build/UnityLoader.js"></script>
+
 </head>
 <body class="bio">
 	<div class="container">
 		<div class="row bio-hero" style="height: 100%;">
-			<div class="bio-hero-overlay">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="background-color:#666666"></div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="background-color:#5caf50"></div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="background-color:#f05448"></div>
-			</div>
 			<div class="bio-hero-image">
-				<div class="bio-hero-image-bg"></div>
-				<div class="bio-hero-image-light-one"></div>
-				<div class="bio-hero-image-car-one"></div>
+				<div class="spinner">
+					<div class="dot1"></div>
+					<div class="dot2"></div>
+				</div>
+				<div id="gameContainer" style="width: 100%;height: 100%;"></div>
 			</div>
 			<div class="bio-hero-banner">
 				<div class="bio-hero-banner-align">
 					<h1 class="bio-hero-banner-title">This is <span style="color:#5caf50">David Waltz</span></h1>
-					<h2 class="bio-hero-banner-subtitle">Web Application <span style="color:#f05448">Developer</span></h2>
+					<h2 class="bio-hero-banner-subtitle">Creative Software <span style="color:#f05448">Developer</span></h2>
 				</div>
 			</div>
 		</div>
@@ -57,7 +58,7 @@
 		</div>
 
 		<div class="row bio-personal">
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:#666666;color:#fff">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:transparent;color:#fff">
 				<span class="glyphicon glyphicon-stats"></span>
 
 				<h3>Experience</h3>
@@ -72,7 +73,7 @@
 
 				<div class="bio-personal-col-dash"></div>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:#5caf50;color:#fff">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:black;color:#fff;opacity:0.8;">
 				<span class="glyphicon glyphicon glyphicon-wrench"></span>
 
 				<h3>Technology</h3>
@@ -88,7 +89,7 @@
 
 				<div class="bio-personal-col-dash"></div>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:#f05448;color:#fff">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bio-personal-col" style="background-color:transparent;color:#fff">
 				<span class="glyphicon glyphicon-globe"></span>
 
 				<h3>Community</h3>
