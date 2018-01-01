@@ -22,7 +22,8 @@ $(function(){
 
 		$('#gameContainer').css({
 			'background-image':'url("/img/Planet.png")',
-			'background-position':'center'
+			'background-position':'center',
+			'background-size': '260%'
 		});
 	} else {
 		gameInstance = UnityLoader.instantiate("gameContainer", "ftp/planet_gen/Build/planet_gen.json", {
