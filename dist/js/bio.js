@@ -2,6 +2,7 @@ $(function(){
 	var maxColHeight = 0;
 	var $bioPersonal = $('.bio-personal-col');
 	var $loader = $('.spinner');
+	var $loaderText = $('.bio-hero-image-loader-text')
 
 	//STYLING PERSONAL COLS TO CONFORM TO THE SAME HEIGHT
 	$bioPersonal.each(function(){
@@ -17,8 +18,13 @@ $(function(){
 		return check;
 	}
 
-	if (checkMobile()) {
+	function hideLoader() {
 		$loader.hide();
+		$loaderText.hide();
+	}
+
+	if (checkMobile()) {
+		hideLoader();
 
 		$('#gameContainer').css({
 			'background-image':'url("/img/Planet.png")',
@@ -32,7 +38,7 @@ $(function(){
 
 				console.log(progress);
 				if (progress == 1) {
-					$loader.hide();
+					hideLoader();
 				}
 			}
 		});
